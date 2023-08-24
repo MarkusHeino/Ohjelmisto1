@@ -6,5 +6,5 @@ sum = a+b+c
 product = a*b*c
 average= (a+b+c)/3
 
-print ("Näiden kolmen kokonaisuluvun summa on: ",sum)
+print ("Näiden kolmen kokonaisuluvun summa on: ", sum)
 print ("Niiden tulo on:", product, "ja niiden keskiarvo on:", average)
