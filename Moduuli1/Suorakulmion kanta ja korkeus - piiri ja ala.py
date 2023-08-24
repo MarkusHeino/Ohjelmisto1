@@ -1,6 +1,8 @@
-b = int(input("Anna kolmion kannan pituus senttimetreinä : "))
-h = int(input("Anna kolmion korkeus senttimetreinä : "))
+b = int(input("Anna suorakulmion kannan pituus senttimetreinä : "))
+h = int(input("Anna suorakulmion korkeus senttimetreinä : "))
 
-area = b*h/2
+area = b * h
+perim = 2*(b + h)
 
-print("Kolmion pinta-ala on = ", area, "cm2")
+print("Suorakulmion pinta-ala on = ", area, "cm2")
+print("Suorakulmion piiri on = ", perim, "cm")
