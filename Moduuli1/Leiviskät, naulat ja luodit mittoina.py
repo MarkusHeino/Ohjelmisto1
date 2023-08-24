@@ -1,14 +1,9 @@
-a = int(input("Lasketaan massa! Anna leiviskät: "))
-b = int(input("Anna naulat: "))
-c = int(input("Anna luodit: "))
+a = int(input("Lasketaan massa! Anna leiviskät:"))
+b = int(input("Sitten anna naulat:"))
+c = int(input("Ja vielä luodit:"))
 
-gram = 13,3 * c
-kilogram = (1000 * gram)
+gram = (a*8512+b*425.6+c*13.3)
+kg = int(gram / 1000)
+remainder_gram = gram % 1000
 
-a = 8512 * gram
-b = 425,6 * gram
-c = 13,3 * gram
-
-print("Massa nykymittojen mukaan:", kilogram, "kilogrammaa ja", gram, "grammaa.")
-
-print(f"Massa nykymittojen mukaan: {kilogram:2.0f}", "kilogrammaa ja , {gram:3.2f}","grammaa.")
+print (f"Massa on nykymittojen mukaan",(kg), "kilogrammmaa ja", "%0.2f" % remainder_gram, "grammaa.")
