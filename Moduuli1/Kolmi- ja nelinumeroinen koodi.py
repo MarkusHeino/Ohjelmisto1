@@ -1,6 +1,6 @@
 import random
 
-name = input("Saisiko olla kolmi- tai nelinumeroinen satunnaisesti generoitu koodisarja?")
+input("Saisiko olla kolmi- ja nelinumeroinen satunnaisesti generoitu koodisarja?")
 
 print("Täältä pesee!")
 
