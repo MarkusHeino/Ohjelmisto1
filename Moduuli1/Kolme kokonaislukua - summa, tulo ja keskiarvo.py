@@ -2,9 +2,9 @@ a = int(input("Anna ensimmäinen kokonaisluku:"))
 b = int(input("Toinen: "))
 c = int(input("Ja kolmas: "))
 
-sum1 = a+b+c
-product = a*b*c
-average = (a+b+c)/3
+summa = a+b+c
+tulo = a*b*c
+keskiarvo = (a+b+c)/3
 
-print("Näiden kolmen kokonaisuluvun summa on: ", sum)
-print("Niiden tulo on:", product, "ja niiden keskiarvo on:", average)
+print("Näiden kolmen kokonaisuluvun summa on: ", summa)
+print("Niiden tulo on:", tulo, "ja niiden keskiarvo on:", keskiarvo)
