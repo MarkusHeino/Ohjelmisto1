@@ -2,7 +2,7 @@ while(True):
 
 value = input("Anna hyttiluokkasi tunnus: LUX, A, B tai C: ")
 
-for retry in range(5): else
+for retry in range(5):
 
 if value == "A":
     print(f"A on ikkunallinen hytti autokannen yläpuolella.")
