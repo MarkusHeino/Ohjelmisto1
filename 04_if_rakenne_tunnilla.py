@@ -9,13 +9,18 @@ if luku > 5:
 print(f"Rahulia ois sen jälkeen: {luku}")
 
 
-ikä = int(input("Anna ikä:"))
+counter = 0
+isValue = True
+while counter < 5 and isValue:
 
-if 15 <= ikä < 18:
-    paino = float(input("Anna paino (kg): "))
+    ikä = int(input("Anna ikä:"))
 
-if ikä >= 18 or ikä >= 15 and paino >= 55:
-    print("Lääkkeen käyttö on sallittua!")
+    if 15 <= ikä < 18:
+        paino = float(input("Anna paino (kg): "))
 
-else:
-    print("Lääkkeen käyttö sallittua!")
+    if ikä >= 18 or ikä >= 15 and paino >= 55:
+        counter += 1
+        print("Lääkkeen käyttö on sallittua!")
+        isValue = False
+    else:
+        print("Lääkkeen ei ole sallittua!")
