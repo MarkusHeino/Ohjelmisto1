@@ -1,4 +1,4 @@
-unit = float(input("Tämä on aika henkilökohtainen kysmys, mutta... Anna kuhasi pituus senttimetreinä: "))
+unit = float(input("Anna kuhan pituus senttimetreinä: "))
 
 if unit < 37:
     print(f"{unit} on alamittainen. Laske se kuha alas! Veteen! Alamitan raja on {37 - unit} cm pidempi!")
