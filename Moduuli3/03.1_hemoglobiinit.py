@@ -1,6 +1,6 @@
-gender = input("Anna biologinen sukupuoli:")
+gender = input("Anna biologinen sukupuoli: ")
 
-hemoglobiini = input("Anna hemoglobiiniarvosi (g/l):")
+hemoglobiini = input("Anna hemoglobiiniarvosi (g/l): ")
 hemoglobiini = int(hemoglobiini)
 
 if gender == "Nainen":
