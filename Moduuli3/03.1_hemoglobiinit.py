@@ -3,7 +3,7 @@ gender = input("Anna biologinen sukupuoli: ")
 hemoglobiini = input("Anna hemoglobiiniarvosi (g/l): ")
 hemoglobiini = int(hemoglobiini)
 
-if gender == "Nainen":
+if gender == "Nainen" or "nainen" in gender:
 
     if hemoglobiini < 117:
         print(f"Hemoglobiiniarvosi {hemoglobiini} on alhainen.")
@@ -14,7 +14,7 @@ if gender == "Nainen":
     elif 117 >= hemoglobiini <= 175:
         print(f"Hemoglobiinisi {hemoglobiini} on OK")
 
-if gender == "Mies":
+if gender == "Mies" or "mies" in gender:
 
     if hemoglobiini < 134:
         print(f"Hemoglobiiniarvosi {hemoglobiini} on alhainen.")
