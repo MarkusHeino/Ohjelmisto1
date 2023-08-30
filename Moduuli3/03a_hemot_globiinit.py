@@ -2,6 +2,9 @@ gender = str("Nainen" or "Mies")
 
 gender = input("Anna biologinen sukupuoli:")
 
+if nainen or mies not in gender:
+    print("Anna biologinen sukupuoli!")
+
 counter = 0
 isValue = True
 while counter < 5 and isValue:
@@ -30,8 +33,4 @@ if gender == "Nainen" and hemoglobiini < 175:
 
 else:
     print("Hemoglobiinisi on OK")
-
-
-
-
 
