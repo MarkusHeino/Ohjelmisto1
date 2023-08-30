@@ -24,3 +24,6 @@ if gender == "Mies" or "mies" in gender:
 
     elif 134 <= hemoglobiini <= 195:
         print(f"Hemoglobiinisi {hemoglobiini} on OK")
+
+    else:
+        print("Virheellinen valinta. Anna hemoglobiini g/l.")
