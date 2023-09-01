@@ -19,5 +19,5 @@ while True:
     elif num < smallest:
         smallest = num
 
-print("Isoin numero oli ", largest)
+print("Isoin numero oli", largest)
 print("Pienin numero oli", smallest)
