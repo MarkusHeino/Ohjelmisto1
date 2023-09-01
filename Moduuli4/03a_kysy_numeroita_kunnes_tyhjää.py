@@ -6,7 +6,7 @@ while True:
     if num == "":
         break
     try:
-        num = int(num)
+        num = float(num)
     except:
         print("Virheellinen arvo!")
         continue
@@ -18,6 +18,6 @@ while True:
         pienin = num
     elif num < pienin:
         pienin = num
-
+    print("Jatkuu...")
 print("Isoin numero oli ", isoin)
 print("Pienin numero oli", pienin)
