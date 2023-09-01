@@ -1,10 +1,10 @@
 try:
     vuosi = int(input("Anna vuosiluku: "))
 
-    if vuosi % 4 == 0:
+    if vuosi % 400 == 0:
         print("Vuosiluku {0} on karkausvuosi.".format(vuosi))
 
-    elif (vuosi % 100 != 0) and (vuosi % 400 == 0):
+    elif (vuosi % 100 != 0) and (vuosi % 4 == 0):
         print("Vuosiluku {0} on karkausvuosi.".format(vuosi))
 
     else:

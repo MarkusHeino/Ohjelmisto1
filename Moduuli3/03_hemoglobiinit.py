@@ -1,21 +1,31 @@
-gender = str(input("Anna biologinen sukupuoli: "))
+gender = input("Anna biologinen sukupuoli (mies tai nainen): ")
 
-hemoglobiini = int(input("Anna hemoglobiiniarvo grammoina litrassa: "))
+hemoglobiini = input("Anna hemoglobiiniarvo grammoina litrassa: ")
+isvalid = hemoglobiini.replace(".", "").isnumeric()
+if isvalid:
+    hemoglobiini = float(hemoglobiini)
 
-if gender == "Nainen" and hemoglobiini < 117:
-    print(f"Hemoglobiiniarvo {hemoglobiini} on alhainen.")
+    if gender.lower() == "mies":
 
-elif gender == "Nainen" and hemoglobiini > 175:
-    print(f"Hemoglobiiniarvo {hemoglobiini} on korkea.")
+        if hemoglobiini < 134:
+            print(f"Hemoglobiiniarvo {hemoglobiini} on alhainen.")
 
-elif gender == "Nainen" and 117 <= hemoglobiini <= 175:
-    print(f"Hemoglobiiniarvo {hemoglobiini} on normaalin rajoissa.")
+        elif hemoglobiini > 195:
+            print(f"Hemoglobiiniarvo {hemoglobiini} on korkea.")
 
-if gender == "Mies" and hemoglobiini < 134:
-    print(f"Hemoglobiiniarvo {hemoglobiini} on alhainen.")
+        elif 134 <= hemoglobiini <= 195:
+            print(f"Hemoglobiiniarvo {hemoglobiini} on normaali.")
 
-elif gender == "Mies" and hemoglobiini > 195:
-    print(f"Hemoglobiiniarvo {hemoglobiini} on korkea.")
+    if gender.lower() == "nainen":
 
-elif gender == "Mies" and 134 <= hemoglobiini <= 195:
-    print(f"Hemoglobiiniarvo {hemoglobiini} on normaali.")
+        if hemoglobiini < 117:
+            print(f"Hemoglobiiniarvo {hemoglobiini} on alhainen.")
+
+        elif hemoglobiini > 175:
+            print(f"Hemoglobiiniarvo {hemoglobiini} on korkea.")
+
+        elif 117 <= hemoglobiini <= 175:
+            print(f"Hemoglobiiniarvo {hemoglobiini} on normaalin rajoissa.")
+
+else:
+    print("Väärä arvo.")
