@@ -5,7 +5,7 @@ while True:
     count += 1
     if count == 5:
         print("Pääsy evätty.")
-        break  # exit
+        break
 
     elif userName == 'python' and password == 'rules':
         print("Tervetuloa!")
