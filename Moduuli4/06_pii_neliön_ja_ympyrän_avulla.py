@@ -1,6 +1,6 @@
 import random
 
-pisteet = int(input("Anna pisteiden määrä väliltä 100000-1000000:"))
+pisteet = int(input("Anna pisteiden määrä väliltä 1000000-10000000:"))
 osumat = 0
 
 for i in range(pisteet):
