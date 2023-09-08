@@ -19,5 +19,6 @@ while True:
     elif num < pienin:
         pienin = num
     print("Jatkuu...")
+
 print("Isoin numero oli ", isoin)
 print("Pienin numero oli", pienin)
