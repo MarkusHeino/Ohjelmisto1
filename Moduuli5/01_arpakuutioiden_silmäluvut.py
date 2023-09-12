@@ -1,6 +1,5 @@
 import random
 rolls = int(input("Anna noppien lukumäärä: "))
-
 def dice(n):
     rolls = []
     for _ in range(n):
