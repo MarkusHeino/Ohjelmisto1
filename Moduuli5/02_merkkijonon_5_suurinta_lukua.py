@@ -1,3 +1,4 @@
+number = 0
 numbers = []
 
 while True:
@@ -7,7 +8,7 @@ while True:
         break
 
     try:
-        number = float(user_input)
+        number = int(user_input)
         numbers.append(number)
     except ValueError:
         print("Anna järkevä arvo.")
@@ -16,7 +17,7 @@ if len(numbers) >= 5:
 
     numbers.sort(reverse=True)
 
-    largest_numbers = numbers[-5:]
+    largest_numbers = numbers[0: 5]
 
     print("Viisi suurinta numeroa laskevassa järjestyksessä:")
     for num in largest_numbers:

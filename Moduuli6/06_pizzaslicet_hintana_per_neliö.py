@@ -16,6 +16,7 @@ diameter2_cm = float(input("Anna pizzan nro. 2 halkaisija senttimetreinä: "))
 price2 = float(input("Ja vielä senkin hinta euroina: "))
 
 unit_price1 = calculate_unit_price(diameter1_cm, price1)
+
 unit_price2 = calculate_unit_price(diameter2_cm, price2)
 
 if unit_price1 < unit_price2:
