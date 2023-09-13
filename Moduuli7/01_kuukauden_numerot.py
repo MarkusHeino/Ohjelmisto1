@@ -5,6 +5,7 @@ try:
 
     if month_number < 1 or month_number > 12:
         print("Ei kuulu vaihtoehtoihin. Anna numero väliltä 1-12.")
+
     else:
 
         season_index = (month_number % 12) // 3
