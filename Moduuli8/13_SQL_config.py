@@ -1,2 +1,2 @@
-user "Minä"
-password "Elvis1"
+user "root"
+password "KuukkeliA2726¤%!"

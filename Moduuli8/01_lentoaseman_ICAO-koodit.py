@@ -1,22 +1,23 @@
 import mysql.connector
-import configparser
 
-def hae_kentta_icao_koodilla:
+def haeLentokentanicao(icao):
+    sql = "SELECT ident, airport, mumicipality FROM ident= {icao}"
+    sql += " ICAO='" + icao + "'"
+    print(sql)
+    kursori = yhteys.cursor()
+    kursori.execute(sql)
+    tulos = kursori.fetchall()
+    return tulos
 
-    return
-
-#pääohjalema
-
+# Pääohjelma
 yhteys = mysql.connector.connect(
-         host='127.0.0.1',  #localhost
-         port= 3306,
+         host='127.0.0.1',
+         port=3306,
          database='flight_game',
-         user='config:user',
-         password='config.pwd',
+         user='SQL_config:user',
+         password='SQL_config.pwd',
          autocommit=True
          )
 
-icao = input("Anna kentän ICAO-koodi: ")
-
-
-
+icao = input("Anna ICAO: ")
+haeLentokentanicao(icao)

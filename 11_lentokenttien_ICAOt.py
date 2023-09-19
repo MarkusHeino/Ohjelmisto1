@@ -1,10 +1,8 @@
-import mysql
-
 # Create a SQLite database (you can replace this with your own database connection)
-conn = sqlite3.connect('airports.db')
+import = mysql.connect('airports.db')
 cursor = conn.cursor()
 
-# Create a table to store airport information
+#Luo taulu lentokenttätiedoilla
 cursor.execute('''
     CREATE TABLE IF NOT EXISTS airports (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -14,23 +12,24 @@ cursor.execute('''
     )
 ''')
 
-# Insert sample data into the table
+#Laita tauluun lisätieto
 cursor.executemany('''
     INSERT INTO airports (icao_code, name, ident_bracket)
     VALUES (?, ?, ?)
 ''', [
     ('KJFK', 'John F. Kennedy International Airport', 'JFK'),
-    ('KLAX', 'Los Angeles International Airport', 'LAX'),
+    ('EFAH', 'Ammasuo Lentokenttä', 'OUL'),
     ('EGLL', 'Heathrow Airport', 'LHR'),
 ])
 
-# Commit changes and close the database connection
+#Commit ja tietokantayhteyden sulku
+
 conn.commit()
 conn.close()
 
-# Function to fetch airport information by ICAO code
+#Funktio jolla haetaan ICAO-koodi tietokannasta
 def get_airport_info(icao_code):
-    conn = sqlite3.connect('airports.db')
+    conn = mysql.connect('airports.db')
     cursor = conn.cursor()
 
     cursor.execute('SELECT name, ident_bracket FROM airports WHERE icao_code = ?', (icao_code,))
@@ -40,20 +39,21 @@ def get_airport_info(icao_code):
 
     return result
 
-# Main program
-while True:
-    icao_code = input('Enter the ICAO code of the airport (e.g., KJFK): ').strip().upper()
+#Pääohjelma
 
-    if icao_code == 'QUIT':
+while True:
+    icao_code = input('Anna lentokentän ICAO-koodi: ').strip().upper()
+
+    if icao_code == '':
         break
 
     airport_info = get_airport_info(icao_code)
 
     if airport_info:
         name, ident_bracket = airport_info
-        print(f'Airport Name: {name}')
-        print(f'Ident-Bracket: {ident_bracket}')
+        print(f'Lentokentän nimi: {name}')
+        print(f'ident-sarake: {ident_bracket}')
     else:
-        print('Airport not found. Please enter a valid ICAO code or type QUIT to exit.')
+        print('Ei löydy lentokenttää. Anna ICAO-koodi tai paina Enter poistuaksesi.')
 
-print('Goodbye!')
+print('Hei hei!')
