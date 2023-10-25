@@ -8,5 +8,6 @@ class Auto:
         self.matka = matka
         Auto.tallissa = Auto.tallissa + 1
 
+
 auto1 = Auto("ABC-123", 142, 120000)
-print (f"Rekisterinumero on {auto1.rekisteritunnus} ja huippunopeus {auto1.huippunopeus} km/h.")
+print(f"Rekisterinumero on {auto1.rekisteritunnus} ja huippunopeus {auto1.huippunopeus} km/h.")
