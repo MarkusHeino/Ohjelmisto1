@@ -9,5 +9,5 @@ class Auto:
         Auto.tallissa = Auto.tallissa + 1
 
 
-auto1 = Auto("ABC-123", 142, 120000)
+auto1 = Auto("ABC-123", 142, 0)
 print(f"Rekisterinumero on {auto1.rekisteritunnus} ja huippunopeus {auto1.huippunopeus} km/h.")
