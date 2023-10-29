@@ -29,7 +29,7 @@ auto1.kiihdyta(30)
 auto1.kiihdyta(70)
 auto1.kiihdyta(50)
 
-print(f"Auton nopeus kiihdyttämisen jälkeen: {auto1.nopeus} km/h,")
+print(f"Auton nopeus kiihdyttämisen jälkeen: {auto1.nopeus} km/h.")
 
 # jarrutetaan
 auto1.kiihdyta(-200)

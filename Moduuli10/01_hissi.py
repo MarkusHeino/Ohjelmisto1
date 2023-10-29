@@ -1,59 +1,32 @@
 class Hissi:
-    def __init__(self, alin, ylin):
-        self.alin = alin
-        self.ylin = ylin
-        self.sijainti = alin
+    def __init__(self):
+        self.sijainti = 1  # hissi aloittaa pohjakerroksesta
 
-
-    def kerros_ylos(self):
-        if self.sijainti < self.ylin:
+    def kerros_ylös(self):
+        if self.sijainti < 6:  # talossa on kuusi kerrosta
             self.sijainti += 1
-        print(f"Hissi on nyt {self.sijaini}. kerroksessa.")
-        return
+            print(f"Hissi on nyt {self.sijainti}. kerroksessa.")
+        else:
+            print("Hissi on jo ylimmässä kerroksessa.")
 
+    def kerros_alas(self):
+        if self.sijainti > 1:
+            self.sijainti -= 1
+            print(f"Hissi on nyt {self.sijainti}. kerroksessa.")
+        else:
+            print("Hissi on jo alimmassa kerroksessa.")
 
     def siirry_kerrokseen(self, haluttu_kerros):
-        if self.sijainti < haluttu_kerros:
+        while self.sijainti < haluttu_kerros:
+            self.kerros_ylös()
+        while self.sijainti > haluttu_kerros:
+            self.kerros_alas()
+        if self.sijainti == 6:
+            print(f"Hissi on nyt {self.sijainti}. kerroksessa, jonne se kutsuttiin.")
 
-            while self.sijainti < haluttu_kerros:
-                self.kerros_ylös()
-        elif self.sijainti < haluttu_kerros:
-            while self.sijainti < haluttu_kerros:
-                self.kerros_alas()
-        print("Hissi on nyt halutussa kerroksessa.")
+# testi
+elevator_G = Hissi()
+elevator_G.siirry_kerrokseen(6)  # Move the elevator to the 6th floor.
 
-
-class Talo:
-    def __init__(self, alin, ylin, hissien_lkm):
-        self.alin = alin
-        self.ylin = ylin
-        self.hissit = [] #lista, joka sisältää talon hissit
-        #luodaan tarvittavat hissit ja talletetaan ne listaan
-        for i in range (hissien_lkm):
-            hissi = Hissi(self.alin, self.ylin)
-            self.hissit.append(hissi)
-
-
-    def aja_hissia(self, hissin_nro, kohdekerros):
-        #oletus: käyttäjä antaa hissin numeron 1, 2, 3, ...
-        hissi = self.hissit[hissin_nro - 1]
-        hissi.siirry_kerrokseen(kohdekerros)
-        print(f"Hissi {hissin_nro} on nyt halutussa kerroksessa {kohdekerros}.")
-        return
-
-
-    # metodi toiminnan tarkistamiseksi
-    def kerro_hissien_sijainnit(self):
-        for i in self.hissit:
-         print(f"Hissi {i+1} on kerroksessa {i.sijainti}")
-
-
-
-#pääohjelma
-talo = Talo(1,12,3)
-talo.aja_hissia(3, 10)
-talo.kerro_hissien_sijainnit()
-
-talo.palohalytys()
-
-print("Hissien sijainnit {kerro_hissien_sijainnit}")
+# kutsu hissiä haluttuun kerrokseen
+elevator_G.siirry_kerrokseen(1)
